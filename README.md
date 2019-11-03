@@ -43,7 +43,7 @@ decode(polyline: polyline)
 ```
 ## Changelog
 
-See [CHANGELOG](./CHANGELOG) for details.
+See [CHANGELOG](./CHANGELOG.md) for details.
 
 ## License
 
