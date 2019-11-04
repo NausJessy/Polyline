@@ -19,7 +19,7 @@ public func encode(path: [CLLocation]) -> Polyline {
 /// - Parameter path: A path to encode.
 ///
 /// - Returns: The encode path as a `Polyline`.
-public func encode(path: [CLLocationCoordinate2D]) -> String {
+public func encode(path: [CLLocationCoordinate2D]) -> Polyline {
     var lastLat = 0, lastLng = 0
     
     return path.reduce("", { result, point in
@@ -32,7 +32,12 @@ public func encode(path: [CLLocationCoordinate2D]) -> String {
     })
 }
 
-private func encode(value: Int) -> String {
+/// Encode a value into a `Polyline`.
+///
+/// - Parameter value: The value to encode.
+///
+/// - Returns: A `Polyline`.
+private func encode(value: Int) -> Polyline {
     var result: String = ""
     
     var v = value < 0 ? ~(value << 1) : value << 1
